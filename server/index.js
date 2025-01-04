@@ -2,7 +2,7 @@ const { Server } = require("socket.io");
 
 const io = new Server(8000, {
   cors: {
-    origin: "https://video-call-pfug.onrender.com",  
+    origin: "https://video-call-pfug.onrender.com:3000",  
     methods: ["GET", "POST"],
     credentials: true,
   },
