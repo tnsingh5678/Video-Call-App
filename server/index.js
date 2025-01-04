@@ -1,10 +1,11 @@
 const { Server } = require("socket.io");
 
 const io = new Server(8000, {
-  origin: '*',
-  methods: ["GET","POST"],
-  allowedHeaders: ["Content-Type"],
-  credentials: true,
+  cors: {
+    origin: "https://video-call-pfug.onrender.com",  
+    methods: ["GET", "POST"],
+    credentials: true,
+  },
 });
 
 const emailToSocketIdMap = new Map();
